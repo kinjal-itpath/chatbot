@@ -1,0 +1,26 @@
+version: "2.0"
+stories:
+- story: begin conversation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+- story: combined begin with url
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu        
+  - intent: begin_lead
+  - action: utter_lead_q1
+  - action: lead_form_p1
+  - active_loop: lead_form_p1
+  - active_loop: null
+  - action: utter_lead_q3
+  - action: utter_lead_q4
+  - action: utter_lead_q5
+  - intent: goodbye
+  - action: utter_goodbye
+- story: fallback story
+  steps:
+  - intent: bot_challenge
+  - action: action_default_fallback

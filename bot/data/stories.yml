@@ -1,0 +1,95 @@
+
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: begin_lead
+  - action: utter_lead_q1
+  - action: lead_form_p1
+  - active_loop: lead_form_p1
+  - slot_was_set:
+    - requested_slot: requirement
+  - slot_was_set:
+    - requirement: y
+  - slot_was_set:
+    - requested_slot: mockup
+  - slot_was_set:
+    - mockup: y
+  - slot_was_set:
+    - requested_slot: timeline
+  - slot_was_set:
+    - timeline: y
+  - slot_was_set:
+    - requested_slot: budget
+  - slot_was_set:
+    - budget: y
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: null
+  - slot_was_set:
+    - requested_slot: name
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: begin_lead
+  - action: utter_lead_q1
+  - action: lead_form_p1
+  - action: utter_lead_q3
+  - action: utter_lead_q4
+  - action: utter_lead_q5
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: begin_lead
+  - action: utter_lead_q1
+  - action: lead_form_p1
+  - action: utter_lead_q3
+  - action: utter_lead_q4
+  - action: utter_lead_q5
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: begin_lead
+  - action: utter_lead_q1
+  - action: lead_form_p1
+  - action: utter_lead_q3
+  - action: utter_lead_q4
+  - action: utter_lead_q5
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: begin_lead
+  - action: utter_lead_q1
+  - action: lead_form_p1
+  - action: utter_lead_q3
+  - action: utter_lead_q4
+  - action: utter_lead_q5
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: goodbye
+  - action: utter_greet
+  - action: utter_menu
+  - intent: goodbye
+  - action: utter_greet
+  - action: utter_menu
